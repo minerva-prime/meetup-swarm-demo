@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  webserver:
+    image: minervaprime/nginx-demo-webserver:v1
+    ports:
+      - "81:80"
+    depends_on:
+      - node-demo-app
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: none
+      update_config:
+        parallelism: 1
+        failure_action: rollback
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/healthcheck"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    
+  node-demo-app:
+    image: minervaprime/node-demo-app:v1
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: none
+      update_config:
+        parallelism: 1
+        failure_action: rollback
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/healthcheck"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
