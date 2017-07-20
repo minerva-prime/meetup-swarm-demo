@@ -1,4 +1,4 @@
-FROM node:8.1.4-alpine
+FROM node:8.1.4 
 
 # For build with no dev dependency
 ENV NODE_ENV production
@@ -8,7 +8,7 @@ COPY . /usr/src/app
 
 WORKDIR /usr/src/app
 
-RUN npm install express
+RUN npm install express redis
 
 USER nobody
-CMD [ "node", "app.sj" ]
+CMD [ "node", "app.js" ]
