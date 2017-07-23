@@ -1,5 +1,6 @@
 var express = require('express');
 var redis = require('redis');
+var os = require('os');
 
 var app = express();
 
@@ -18,7 +19,7 @@ app.get('/', function (req, res, next) {
             res.status(500).send('GET ' + err);
             return next(err);
         }
-        res.send('Hello docker swarm meetup v2 This page has been viewed ' + counter + ' tiems' );
+        res.send('Hello docker swarm meetup v2 This page has been viewed ' + counter + ' tiems <br> Hostname: ' + os.hostname() );
         // Example for error code that swarm deploy will rollback
         // res.send('Hello docker swarm meetup v2 \nThis page has been viewed ' + counter ' tiems' )
         console.log(counter + ' times');
