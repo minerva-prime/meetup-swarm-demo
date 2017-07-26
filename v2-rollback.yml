@@ -2,7 +2,7 @@ version: "3"
 
 services:  
   webserver:
-    image: minervaprime/demo-webserver:v1
+    image: minervaprime/demo-webserver:v1-rollback
     ports:
       - "80:80"
     deploy:
