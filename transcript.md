@@ -1,5 +1,16 @@
 # Demo time
 
+## demo create a small swarm cluster
+> on the first node (which will be the manager)
+```
+docker swarm init
+docker join-token worker
+```
+> on the workers node 
+```
+docker swarm join # with the token provided
+```
+
 ## demo v1 deploy
 1. deploying the v1 stack of nginx and node
 ```
@@ -30,7 +41,9 @@ docker service logs -f meetup_webserver
 docker stack deploy -c v1-rollback.yml meetup
 ```
 2. Watch the deploy process start the deploy
+```
 watch "docker service ps meetup_nodeapp"
+```
 
 ## demo v1.2 deploy with bad code
 1. Running stack deploy and show rollback on bad code
