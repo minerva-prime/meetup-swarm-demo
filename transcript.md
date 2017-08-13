@@ -4,7 +4,7 @@
 > on the first node (which will be the manager)
 ```
 docker swarm init
-docker join-token worker
+docker swarm join-token worker
 ```
 > on the workers node 
 ```
