@@ -33,7 +33,12 @@ docker service ps meetup_nodeapp --no-trunc
 docker service logs -f meetup_nodeapp
 docker service logs -f meetup_webserver
 ```
-6. go to browser to show that v1 is running and using ingress VIP to round robin into the nodeapp containers
+6. locate one of the workers that runs a task of service meetup_nodeapp
+> see the health state of the container
+```
+docker ps
+```
+7. go to browser to show that v1 is running and using ingress VIP to round robin into the nodeapp containers
 
 ## demo v1.1 deploy with improper health check
 1. Running stack deploy and show the rollback on failed health check
