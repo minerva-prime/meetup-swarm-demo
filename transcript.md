@@ -10,6 +10,10 @@ docker swarm join-token worker
 ```
 docker swarm join # with the token provided
 ```
+> Verify that the node joined the swarm
+```
+docker node list #run on the manager
+```
 
 ## demo v1 deploy
 1. deploying the v1 stack of nginx and node
