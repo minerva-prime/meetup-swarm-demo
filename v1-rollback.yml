@@ -32,6 +32,6 @@ services:
         failure_action: rollback
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3011/healthcheck"]
-      interval: 30s
+      interval: 10s
       timeout: 5s
-      retries: 3
+      retries: 2
