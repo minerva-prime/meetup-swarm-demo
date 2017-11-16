@@ -9,4 +9,4 @@ until [[ $CODE -eq 200 ]]; do
 done
 
 echo "starting nginx"
-nginx -g 'daemon off;'
+exec nginx -g 'daemon off;'
