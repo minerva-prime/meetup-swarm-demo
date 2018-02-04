@@ -7,6 +7,11 @@ app.get('/', function (req, res) {
   console.log(req.headers)
 })
 
+app.get('/api/ping', function (req, res) {
+  res.send('pong')
+  console.log('pong')
+})
+
 app.get('/healthcheck', function (req, res) {
   res.send('up')
   console.log(req.headers)
