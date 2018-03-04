@@ -17,3 +17,8 @@ pids
 # Dependency directories
 node_modules/
 
+# no need for demo
+package-lock.json
+
+# vagrant
+vagrant/
