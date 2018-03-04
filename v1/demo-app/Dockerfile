@@ -1,4 +1,4 @@
-FROM node:8.1.4 
+FROM node:8.1.4-alpine
 
 # For build with no dev dependency
 ENV NODE_ENV production
