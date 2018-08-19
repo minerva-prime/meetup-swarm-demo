@@ -10,7 +10,7 @@ RUN apk update \
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 
-RUN npm install express redis
+RUN npm install express redis pino
 
 USER nobody
 CMD [ "node", "app.js" ]
