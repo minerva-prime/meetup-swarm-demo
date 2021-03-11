@@ -1,4 +1,6 @@
-FROM node:8.1.4-alpine
+FROM node:14.16.0-alpine3.12
+
+RUN apk add --update curl
 
 # For build with no dev dependency
 ENV NODE_ENV production

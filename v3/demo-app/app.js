@@ -1,6 +1,7 @@
 var express = require('express');
 var redis = require('redis');
 var os = require('os');
+const { res } = require('pino-std-serializers');
 const logger = require('pino')();
 
 var app = express();
@@ -21,9 +22,13 @@ app.get('/', function (req, res, next) {
             logger.error(err)
             return next(err);
         }
-        res.send('Hello docker swarm meetup v2 This page has been viewed ' + counter + ' tiems <br> Hostname: ' + os.hostname() );
+        res.send('Hello docker swarm meetup v2<br>This page has been viewed ' + counter + ' tiems<br>Hostname: ' + os.hostname() );
         logger.info(counter + ' times');
     });
+});
+
+app.get('/ping', function (req, res) {
+  res.status(200).send('pong');
 });
 
 app.get('/healthcheck', function (req, res) {
