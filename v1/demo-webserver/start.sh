@@ -2,9 +2,9 @@
 
 CODE=0
 
-until [[ $CODE -eq 200 ]]; do
-	CODE=$(curl -I -s --write-out %{http_code} --output /dev/null http://nodeapp:3000)
-	echo "waiting for nodeapp"
+until [ "${CODE}" -eq 200 ]; do
+	CODE=$(curl -I -s --write-out %{http_code} --output /dev/null http://${NODE_APP_URL}:3000)
+	echo "waiting for ${NODE_APP_URL}"
 	sleep 1
 done
 

@@ -1,10 +1,10 @@
-FROM node:8.1.4-alpine
+FROM node:16.6.2-stretch-slim
 
 # For build with no dev dependency
 ENV NODE_ENV production
 
-RUN apk update \
-    && apk add curl \
+RUN apt update \
+    && apt install -y curl \
     && mkdir -p /usr/src/app
 
 COPY . /usr/src/app

@@ -5,7 +5,7 @@ START=`pwd`
 for version in `ls $1`; do
 	echo $version
 	cd $1/$version
-	docker build --no-cache -t $ORG/$version:$1 .
-	docker push $ORG/$version:$1
+	docker buildx build --platform linux/amd64,linux/arm64 -t $ORG/$version:$1 . --push
+	# docker push $ORG/$version:$1
 	cd $START
 done

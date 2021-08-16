@@ -1,7 +1,7 @@
-FROM nginx:1.12.2-alpine
+FROM nginx:1.21.1
 
-RUN apk update \
-	&& apk add curl \
+RUN apt-get update \
+	&& apt-get install -y curl \
 	&& rm -f /etc/nginx/conf.d/*.conf \
 	&& rm -f /etc/nginx/nginx.conf
 
