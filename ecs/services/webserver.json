@@ -1,0 +1,262 @@
+{
+    "services": [
+        {
+            "serviceArn": "arn:aws:ecs:eu-west-1:910416587115:service/demo/webservice",
+            "serviceName": "webservice",
+            "clusterArn": "arn:aws:ecs:eu-west-1:910416587115:cluster/demo",
+            "loadBalancers": [
+                {
+                    "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:910416587115:targetgroup/webserver/b2994fed508ef44f",
+                    "containerName": "demo-webserver",
+                    "containerPort": 80
+                }
+            ],
+            "serviceRegistries": [
+                {
+                    "registryArn": "arn:aws:servicediscovery:eu-west-1:910416587115:service/srv-jug5tsufd6k4cixn"
+                }
+            ],
+            "status": "ACTIVE",
+            "desiredCount": 2,
+            "runningCount": 2,
+            "pendingCount": 0,
+            "launchType": "EC2",
+            "taskDefinition": "arn:aws:ecs:eu-west-1:910416587115:task-definition/demo-webserver:7",
+            "deploymentConfiguration": {
+                "deploymentCircuitBreaker": {
+                    "enable": false,
+                    "rollback": false
+                },
+                "maximumPercent": 200,
+                "minimumHealthyPercent": 100
+            },
+            "deployments": [
+                {
+                    "id": "ecs-svc/2526679245857652071",
+                    "status": "PRIMARY",
+                    "taskDefinition": "arn:aws:ecs:eu-west-1:910416587115:task-definition/demo-webserver:7",
+                    "desiredCount": 2,
+                    "pendingCount": 0,
+                    "runningCount": 2,
+                    "failedTasks": 0,
+                    "createdAt": "2021-03-11T19:54:40.460000+02:00",
+                    "updatedAt": "2021-03-11T20:02:27.610000+02:00",
+                    "launchType": "EC2",
+                    "networkConfiguration": {
+                        "awsvpcConfiguration": {
+                            "subnets": [
+                                "subnet-9f908ed7",
+                                "subnet-0dd39b57",
+                                "subnet-0e2a2468"
+                            ],
+                            "securityGroups": [
+                                "sg-0d60e21d908ec29c6",
+                                "sg-0f53ecbdfa860de9c",
+                                "sg-4ba37511"
+                            ],
+                            "assignPublicIp": "DISABLED"
+                        }
+                    },
+                    "rolloutState": "COMPLETED",
+                    "rolloutStateReason": "ECS deployment ecs-svc/2526679245857652071 completed."
+                }
+            ],
+            "roleArn": "arn:aws:iam::910416587115:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+            "events": [
+                {
+                    "id": "832befae-b98d-44aa-8ac7-d6cbb027369a",
+                    "createdAt": "2021-03-15T08:08:16.971000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "deaede5e-3c3e-4ab1-8610-96a105437da2",
+                    "createdAt": "2021-03-15T02:07:41.495000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "58c722ac-ae81-4cd6-8d3a-7c3127d90db7",
+                    "createdAt": "2021-03-14T20:07:09.484000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "07bc1aa3-2ca1-442e-bdb0-e7dc0525bf47",
+                    "createdAt": "2021-03-14T14:06:46.155000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "1d954af7-db64-4142-b86e-58b7516572c3",
+                    "createdAt": "2021-03-14T08:06:02.067000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "ea42d323-68f2-40e0-95e6-2b06ab27307b",
+                    "createdAt": "2021-03-14T02:05:57.285000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "a67de25c-b39b-4fbc-9a27-2ae811919d64",
+                    "createdAt": "2021-03-13T20:05:41.075000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "696523b1-ea74-431c-83f3-7aa44a9dbed3",
+                    "createdAt": "2021-03-13T14:05:37.551000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "227c8f69-6e02-4ed6-b795-d0fe8ef76303",
+                    "createdAt": "2021-03-13T08:04:54.283000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "5b258e6a-a4ce-4712-a07c-c1a256667459",
+                    "createdAt": "2021-03-13T02:04:50.288000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "df57b0b9-d553-41cb-9ae0-abdc19839121",
+                    "createdAt": "2021-03-12T20:04:10.142000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "efbb29e2-4363-4c8f-9d78-ed6756477d31",
+                    "createdAt": "2021-03-12T14:03:34.546000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "ee32b3a1-3069-4144-8ed4-d6887c016f14",
+                    "createdAt": "2021-03-12T08:03:05.661000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "cdc55360-314a-4b54-9da9-a5b526739edf",
+                    "createdAt": "2021-03-12T02:02:27.803000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "afd84581-bb28-4ccd-b8d2-b4514846ab1d",
+                    "createdAt": "2021-03-11T20:02:27.616000+02:00",
+                    "message": "(service webservice) has reached a steady state."
+                },
+                {
+                    "id": "1e17a918-c60e-4e81-a550-27cb8992a5e7",
+                    "createdAt": "2021-03-11T20:02:27.615000+02:00",
+                    "message": "(service webservice) (deployment ecs-svc/2526679245857652071) deployment completed."
+                },
+                {
+                    "id": "1dd68fec-ff41-4f82-bee7-44f745e32567",
+                    "createdAt": "2021-03-11T20:01:07.216000+02:00",
+                    "message": "(service webservice) registered 1 targets in (target-group arn:aws:elasticloadbalancing:eu-west-1:910416587115:targetgroup/webserver/b2994fed508ef44f)"
+                },
+                {
+                    "id": "f56bf76a-6685-40e5-ad73-4823c8e2567a",
+                    "createdAt": "2021-03-11T19:59:56.272000+02:00",
+                    "message": "(service webservice) has started 1 tasks: (task d51627e8fed7422e835fd163f91cd727)."
+                },
+                {
+                    "id": "d5e26b43-33d9-4b54-8fe5-2c1d422417be",
+                    "createdAt": "2021-03-11T19:59:46.374000+02:00",
+                    "message": "(service webservice) has stopped 1 running tasks: (task 1a0448c85dde41d284b0982df9815289)."
+                },
+                {
+                    "id": "ac28ab64-a23a-499a-a712-07d744a8e929",
+                    "createdAt": "2021-03-11T19:59:46.373000+02:00",
+                    "message": "(service webservice) (task 1a0448c85dde41d284b0982df9815289) failed container health checks."
+                },
+                {
+                    "id": "5ec252de-db26-4015-ab66-eda00d7c016c",
+                    "createdAt": "2021-03-11T19:59:46.339000+02:00",
+                    "message": "(service webservice) deregistered 1 targets in (target-group arn:aws:elasticloadbalancing:eu-west-1:910416587115:targetgroup/webserver/b2994fed508ef44f)"
+                },
+                {
+                    "id": "fd97cafc-b832-4717-8aa2-ec69550da0bd",
+                    "createdAt": "2021-03-11T19:59:46.280000+02:00",
+                    "message": "(service webservice) has started 1 tasks: (task c9f777d0a22d4d3f9ba295b53ff845bf)."
+                },
+                {
+                    "id": "3d8409ff-9119-43d6-b0e9-6c90734cb7c8",
+                    "createdAt": "2021-03-11T19:59:36.143000+02:00",
+                    "message": "(service webservice) has stopped 1 running tasks: (task 1f422e0bed5b4a1588cf904d458c7b68)."
+                },
+                {
+                    "id": "467c05c2-da58-454f-8417-6fcf265f9c71",
+                    "createdAt": "2021-03-11T19:59:36.142000+02:00",
+                    "message": "(service webservice) (task 1f422e0bed5b4a1588cf904d458c7b68) failed container health checks."
+                },
+                {
+                    "id": "9f956e0f-05dd-45c0-a978-8780f5f131aa",
+                    "createdAt": "2021-03-11T19:59:36.108000+02:00",
+                    "message": "(service webservice) deregistered 1 targets in (target-group arn:aws:elasticloadbalancing:eu-west-1:910416587115:targetgroup/webserver/b2994fed508ef44f)"
+                },
+                {
+                    "id": "9b2a30b3-ab68-4982-9d1c-e4cbf5898a5d",
+                    "createdAt": "2021-03-11T19:57:55.220000+02:00",
+                    "message": "(service webservice) registered 1 targets in (target-group arn:aws:elasticloadbalancing:eu-west-1:910416587115:targetgroup/webserver/b2994fed508ef44f)"
+                },
+                {
+                    "id": "0b8a9487-ba08-4640-8488-c8c7b4f5aef3",
+                    "createdAt": "2021-03-11T19:57:04.326000+02:00",
+                    "message": "(service webservice) has started 2 tasks: (task 1f422e0bed5b4a1588cf904d458c7b68) (task 1a0448c85dde41d284b0982df9815289)."
+                },
+                {
+                    "id": "c310eea7-3d79-4ac5-a4ca-21ad7167aecd",
+                    "createdAt": "2021-03-11T19:56:54.714000+02:00",
+                    "message": "(service webservice) has stopped 2 running tasks: (task 9a27940242c6443a83231f95c4aed1cb) (task 687c08696a2144f6924ff7bb434eb14f)."
+                },
+                {
+                    "id": "8ad0664c-fcf3-4963-aab6-586f657562a2",
+                    "createdAt": "2021-03-11T19:56:54.713000+02:00",
+                    "message": "(service webservice) (task 687c08696a2144f6924ff7bb434eb14f) failed container health checks."
+                },
+                {
+                    "id": "b98af5ec-725c-46d0-be5c-5c774334e216",
+                    "createdAt": "2021-03-11T19:56:54.712000+02:00",
+                    "message": "(service webservice) (task 9a27940242c6443a83231f95c4aed1cb) failed container health checks."
+                },
+                {
+                    "id": "69d49c97-2be8-4b7b-b615-93c2f857089d",
+                    "createdAt": "2021-03-11T19:56:54.649000+02:00",
+                    "message": "(service webservice) deregistered 2 targets in (target-group arn:aws:elasticloadbalancing:eu-west-1:910416587115:targetgroup/webserver/b2994fed508ef44f)"
+                },
+                {
+                    "id": "f035b658-0f31-4a67-ade9-62bd336c19b6",
+                    "createdAt": "2021-03-11T19:55:13.539000+02:00",
+                    "message": "(service webservice) registered 2 targets in (target-group arn:aws:elasticloadbalancing:eu-west-1:910416587115:targetgroup/webserver/b2994fed508ef44f)"
+                },
+                {
+                    "id": "8cdf4ff1-0a9e-4139-881e-c08872e92ada",
+                    "createdAt": "2021-03-11T19:54:41.298000+02:00",
+                    "message": "(service webservice) has started 2 tasks: (task 9a27940242c6443a83231f95c4aed1cb) (task 687c08696a2144f6924ff7bb434eb14f)."
+                }
+            ],
+            "createdAt": "2021-03-11T19:54:40.460000+02:00",
+            "placementConstraints": [],
+            "placementStrategy": [
+                {
+                    "type": "random"
+                }
+            ],
+            "networkConfiguration": {
+                "awsvpcConfiguration": {
+                    "subnets": [
+                        "subnet-9f908ed7",
+                        "subnet-0dd39b57",
+                        "subnet-0e2a2468"
+                    ],
+                    "securityGroups": [
+                        "sg-0d60e21d908ec29c6",
+                        "sg-0f53ecbdfa860de9c",
+                        "sg-4ba37511"
+                    ],
+                    "assignPublicIp": "DISABLED"
+                }
+            },
+            "healthCheckGracePeriodSeconds": 0,
+            "schedulingStrategy": "REPLICA",
+            "createdBy": "arn:aws:iam::910416587115:role/Admin",
+            "enableECSManagedTags": true,
+            "propagateTags": "NONE"
+        }
+    ],
+    "failures": []
+}

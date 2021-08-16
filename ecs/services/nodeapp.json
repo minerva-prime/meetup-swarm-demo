@@ -1,0 +1,187 @@
+{
+    "services": [
+        {
+            "serviceArn": "arn:aws:ecs:eu-west-1:910416587115:service/demo/nodeapp",
+            "serviceName": "nodeapp",
+            "clusterArn": "arn:aws:ecs:eu-west-1:910416587115:cluster/demo",
+            "loadBalancers": [
+                {
+                    "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:910416587115:targetgroup/nodeapp/b231451c0a79397e",
+                    "containerName": "nodeapp",
+                    "containerPort": 3000
+                }
+            ],
+            "serviceRegistries": [
+                {
+                    "registryArn": "arn:aws:servicediscovery:eu-west-1:910416587115:service/srv-5e53o4yo5yuvqdyp"
+                }
+            ],
+            "status": "ACTIVE",
+            "desiredCount": 2,
+            "runningCount": 2,
+            "pendingCount": 0,
+            "launchType": "EC2",
+            "taskDefinition": "arn:aws:ecs:eu-west-1:910416587115:task-definition/demo-app:29",
+            "deploymentConfiguration": {
+                "deploymentCircuitBreaker": {
+                    "enable": false,
+                    "rollback": false
+                },
+                "maximumPercent": 200,
+                "minimumHealthyPercent": 100
+            },
+            "deployments": [
+                {
+                    "id": "ecs-svc/6026131550122616584",
+                    "status": "PRIMARY",
+                    "taskDefinition": "arn:aws:ecs:eu-west-1:910416587115:task-definition/demo-app:29",
+                    "desiredCount": 2,
+                    "pendingCount": 0,
+                    "runningCount": 2,
+                    "failedTasks": 0,
+                    "createdAt": "2021-03-11T19:59:19.512000+02:00",
+                    "updatedAt": "2021-03-11T20:01:06.825000+02:00",
+                    "launchType": "EC2",
+                    "networkConfiguration": {
+                        "awsvpcConfiguration": {
+                            "subnets": [
+                                "subnet-9f908ed7",
+                                "subnet-0dd39b57",
+                                "subnet-0e2a2468"
+                            ],
+                            "securityGroups": [
+                                "sg-0d60e21d908ec29c6",
+                                "sg-0f53ecbdfa860de9c",
+                                "sg-4ba37511"
+                            ],
+                            "assignPublicIp": "DISABLED"
+                        }
+                    },
+                    "rolloutState": "COMPLETED",
+                    "rolloutStateReason": "ECS deployment ecs-svc/6026131550122616584 completed."
+                }
+            ],
+            "roleArn": "arn:aws:iam::910416587115:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+            "events": [
+                {
+                    "id": "7a38dfb0-e74f-4a48-8612-c37c4d0c3e46",
+                    "createdAt": "2021-03-15T08:05:58.090000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "2647b87a-c052-4133-b431-41ce7e8aeb49",
+                    "createdAt": "2021-03-15T02:05:40.174000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "d312f35e-51f5-4bca-ad1e-ffc49bc8dcfb",
+                    "createdAt": "2021-03-14T20:05:40.096000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "40010240-e8e3-44ef-8df1-6147911ce73c",
+                    "createdAt": "2021-03-14T14:05:17.080000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "9375f8df-a13a-4729-beb7-497c459690df",
+                    "createdAt": "2021-03-14T08:04:45.961000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "7111865a-c077-4cb0-ad5b-9bd8d71743a8",
+                    "createdAt": "2021-03-14T02:04:05.626000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "fc2d2656-18bd-4392-85a0-6b87e3360eb1",
+                    "createdAt": "2021-03-13T20:04:02.904000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "9cc30999-2ddc-4eb3-b1ae-398adac3d398",
+                    "createdAt": "2021-03-13T14:03:50.877000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "16e92a01-6ac8-45da-92e9-e647be9cdeb8",
+                    "createdAt": "2021-03-13T08:03:10.472000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "20103dfb-34ff-4b2c-8d4b-760b22642966",
+                    "createdAt": "2021-03-13T02:03:06.959000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "94f034bc-9f50-4127-9ebc-386ede6b2213",
+                    "createdAt": "2021-03-12T20:02:39.317000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "d241aa6e-0ee3-42c8-8507-b8319469410e",
+                    "createdAt": "2021-03-12T14:02:23.607000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "5fa72896-d012-4b0a-ad84-9c496c665115",
+                    "createdAt": "2021-03-12T08:01:57.402000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "50194743-a2c1-4183-8170-57f40bc6d0ab",
+                    "createdAt": "2021-03-12T02:01:54.090000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "4dd9688c-f478-4f87-8162-ea1f36f6837c",
+                    "createdAt": "2021-03-11T20:01:06.831000+02:00",
+                    "message": "(service nodeapp) has reached a steady state."
+                },
+                {
+                    "id": "bd406017-fb92-467e-bfe3-8134af5a2d27",
+                    "createdAt": "2021-03-11T20:01:06.830000+02:00",
+                    "message": "(service nodeapp) (deployment ecs-svc/6026131550122616584) deployment completed."
+                },
+                {
+                    "id": "39171520-f08c-4c0e-927f-eb8f04b02751",
+                    "createdAt": "2021-03-11T19:59:56.307000+02:00",
+                    "message": "(service nodeapp) registered 1 targets in (target-group arn:aws:elasticloadbalancing:eu-west-1:910416587115:targetgroup/nodeapp/b231451c0a79397e)"
+                },
+                {
+                    "id": "5a27976a-0939-41f7-a89f-63bbfb5d672b",
+                    "createdAt": "2021-03-11T19:59:25.961000+02:00",
+                    "message": "(service nodeapp) has started 2 tasks: (task b55fe1a5132a46a7a13fcc6f7c966240) (task c7973ee4aee246b0a3f5b5ff16dab259)."
+                }
+            ],
+            "createdAt": "2021-03-11T19:59:19.512000+02:00",
+            "placementConstraints": [],
+            "placementStrategy": [
+                {
+                    "type": "random"
+                }
+            ],
+            "networkConfiguration": {
+                "awsvpcConfiguration": {
+                    "subnets": [
+                        "subnet-9f908ed7",
+                        "subnet-0dd39b57",
+                        "subnet-0e2a2468"
+                    ],
+                    "securityGroups": [
+                        "sg-0d60e21d908ec29c6",
+                        "sg-0f53ecbdfa860de9c",
+                        "sg-4ba37511"
+                    ],
+                    "assignPublicIp": "DISABLED"
+                }
+            },
+            "healthCheckGracePeriodSeconds": 0,
+            "schedulingStrategy": "REPLICA",
+            "createdBy": "arn:aws:iam::910416587115:role/Admin",
+            "enableECSManagedTags": true,
+            "propagateTags": "NONE"
+        }
+    ],
+    "failures": []
+}

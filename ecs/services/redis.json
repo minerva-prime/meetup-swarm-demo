@@ -1,0 +1,250 @@
+{
+    "services": [
+        {
+            "serviceArn": "arn:aws:ecs:eu-west-1:910416587115:service/demo/redis",
+            "serviceName": "redis",
+            "clusterArn": "arn:aws:ecs:eu-west-1:910416587115:cluster/demo",
+            "loadBalancers": [],
+            "serviceRegistries": [
+                {
+                    "registryArn": "arn:aws:servicediscovery:eu-west-1:910416587115:service/srv-hvmbg7yx7y6lkohy"
+                }
+            ],
+            "status": "ACTIVE",
+            "desiredCount": 1,
+            "runningCount": 1,
+            "pendingCount": 0,
+            "launchType": "EC2",
+            "taskDefinition": "arn:aws:ecs:eu-west-1:910416587115:task-definition/demo-redis:6",
+            "deploymentConfiguration": {
+                "deploymentCircuitBreaker": {
+                    "enable": false,
+                    "rollback": false
+                },
+                "maximumPercent": 200,
+                "minimumHealthyPercent": 100
+            },
+            "deployments": [
+                {
+                    "id": "ecs-svc/8955186295719057281",
+                    "status": "PRIMARY",
+                    "taskDefinition": "arn:aws:ecs:eu-west-1:910416587115:task-definition/demo-redis:6",
+                    "desiredCount": 1,
+                    "pendingCount": 0,
+                    "runningCount": 1,
+                    "failedTasks": 0,
+                    "createdAt": "2021-03-14T13:57:54.856000+02:00",
+                    "updatedAt": "2021-03-14T14:08:35.951000+02:00",
+                    "launchType": "EC2",
+                    "networkConfiguration": {
+                        "awsvpcConfiguration": {
+                            "subnets": [
+                                "subnet-9f908ed7",
+                                "subnet-0dd39b57",
+                                "subnet-0e2a2468"
+                            ],
+                            "securityGroups": [
+                                "sg-0d60e21d908ec29c6",
+                                "sg-0f53ecbdfa860de9c",
+                                "sg-4ba37511"
+                            ],
+                            "assignPublicIp": "DISABLED"
+                        }
+                    },
+                    "rolloutState": "COMPLETED",
+                    "rolloutStateReason": "ECS deployment ecs-svc/8955186295719057281 completed."
+                }
+            ],
+            "roleArn": "arn:aws:iam::910416587115:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+            "events": [
+                {
+                    "id": "214a4906-2b54-4409-9fdd-9ba0dca8ccfc",
+                    "createdAt": "2021-03-15T08:09:33.640000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "fdb25103-4e73-44d0-abe3-74cda6f5fd04",
+                    "createdAt": "2021-03-15T02:09:15.146000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "60eac503-a367-4734-96e4-5f4b8fd2f950",
+                    "createdAt": "2021-03-14T20:08:55.779000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "fd07a83b-189f-46f4-b8b1-002d10e8fe69",
+                    "createdAt": "2021-03-14T14:08:35.958000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "0c2f673a-e3e0-4fcc-8a89-10f3c2b19469",
+                    "createdAt": "2021-03-14T14:06:59.675000+02:00",
+                    "message": "(service redis) has started 1 tasks: (task 76266e0593bc46aeb3b1dac781df41f0)."
+                },
+                {
+                    "id": "10f1a7cb-7039-4021-be5a-2897aa9a4fd9",
+                    "createdAt": "2021-03-14T14:00:03.996000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "c246d0ef-1a75-4403-85db-85cda826047a",
+                    "createdAt": "2021-03-14T14:00:03.995000+02:00",
+                    "message": "(service redis) (deployment ecs-svc/8955186295719057281) deployment completed."
+                },
+                {
+                    "id": "8ac9a782-e46c-4e06-ae19-2258b584d824",
+                    "createdAt": "2021-03-14T13:59:20.069000+02:00",
+                    "message": "(service redis) has stopped 1 running tasks: (task 8ba176197db44870a00304c67c019725)."
+                },
+                {
+                    "id": "52deee58-b5fc-4014-93fd-75eb717e7e96",
+                    "createdAt": "2021-03-14T13:58:16.274000+02:00",
+                    "message": "(service redis) has started 1 tasks: (task 4f95dd43140647a4ba6fb34c63a05988)."
+                },
+                {
+                    "id": "4e637f4c-965e-4c8a-ad48-65d4136a1882",
+                    "createdAt": "2021-03-14T13:52:03.412000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "55488727-2188-46c1-a5b3-3da9fd6c23f5",
+                    "createdAt": "2021-03-14T13:52:03.411000+02:00",
+                    "message": "(service redis) (deployment ecs-svc/7794859061778573777) deployment completed."
+                },
+                {
+                    "id": "c59ed1cf-3af4-4e60-80cb-3cdf5447cb6d",
+                    "createdAt": "2021-03-14T13:51:22.534000+02:00",
+                    "message": "(service redis) has stopped 1 running tasks: (task 65e9b5993a9e458db4bfff3df87bf537)."
+                },
+                {
+                    "id": "1b0ce44e-05ba-456b-84ce-3d7f32692a50",
+                    "createdAt": "2021-03-14T13:49:50.693000+02:00",
+                    "message": "(service redis) has started 1 tasks: (task 8ba176197db44870a00304c67c019725)."
+                },
+                {
+                    "id": "b63cb22c-56d0-4c7e-ab06-e7a412532b6a",
+                    "createdAt": "2021-03-14T13:48:11.439000+02:00",
+                    "message": "(service redis) has started 1 tasks: (task 9216388fc55b40f79a24c5b4cf3f1cf3)."
+                },
+                {
+                    "id": "e20e8509-9035-4708-9aac-0f10d9a7fa33",
+                    "createdAt": "2021-03-14T13:47:18.389000+02:00",
+                    "message": "(service redis) has started 1 tasks: (task 61c4f2ef63364f9889ff173422e39f99)."
+                },
+                {
+                    "id": "ed55faa1-c51f-4c25-a903-d2bc692b3c45",
+                    "createdAt": "2021-03-14T13:46:26.830000+02:00",
+                    "message": "(service redis) has started 1 tasks: (task c3226f43b9ca49708c1dd629a0559774)."
+                },
+                {
+                    "id": "2fe4a2fb-ab40-436b-a0e5-e5613f425050",
+                    "createdAt": "2021-03-14T13:43:51.518000+02:00",
+                    "message": "(service redis) has started 1 tasks: (task 570a9215185846d3b0c57e3e0e7069d5)."
+                },
+                {
+                    "id": "62e8da36-fad2-4077-a97f-ac359026118c",
+                    "createdAt": "2021-03-14T13:42:58.436000+02:00",
+                    "message": "(service redis) has started 1 tasks: (task 5faf9de5293142849ddbfb6c175c49fc)."
+                },
+                {
+                    "id": "41562488-28e9-47eb-8f94-ab96858ba939",
+                    "createdAt": "2021-03-14T13:42:04.825000+02:00",
+                    "message": "(service redis) has started 1 tasks: (task 9fac2904fffc4074bb8aa4f185495311)."
+                },
+                {
+                    "id": "f0b8ba3a-82cc-4c3f-9cca-518cf27a4075",
+                    "createdAt": "2021-03-14T07:56:46.400000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "2122f96b-61d4-4836-a675-8c7d3d8926c4",
+                    "createdAt": "2021-03-14T01:56:20.678000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "c3acccf6-9ed2-43f6-a5af-0a8833ac4c9b",
+                    "createdAt": "2021-03-13T19:56:10.123000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "5576009b-4763-49c3-8e3f-b4d8dd0fc85a",
+                    "createdAt": "2021-03-13T13:55:42.500000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "057745fd-9868-437e-9cc6-57eb6bb2b57a",
+                    "createdAt": "2021-03-13T07:55:27.123000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "f3189fa0-98ac-4946-9062-26d37bd0b195",
+                    "createdAt": "2021-03-13T01:55:21.662000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "472e2171-3ca6-4d5d-91ee-bc526e8d5db6",
+                    "createdAt": "2021-03-12T19:54:57.803000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "c85996e4-b1f4-4095-8b19-10bac9de8d4f",
+                    "createdAt": "2021-03-12T13:54:46.977000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "8277ec79-536c-49ef-b546-33df224d0f41",
+                    "createdAt": "2021-03-12T07:54:19.705000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "79af618f-ac6d-4e4c-98a1-cd9bdb32ad2b",
+                    "createdAt": "2021-03-12T01:53:47.515000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "aa66eb89-faa0-42d3-a7ac-13c069329b16",
+                    "createdAt": "2021-03-11T19:53:40.905000+02:00",
+                    "message": "(service redis) has reached a steady state."
+                },
+                {
+                    "id": "143146e3-303e-4fb3-986f-34075df3f826",
+                    "createdAt": "2021-03-11T19:53:40.904000+02:00",
+                    "message": "(service redis) (deployment ecs-svc/6719884136518831805) deployment completed."
+                },
+                {
+                    "id": "e1cd16fe-7edd-4f73-b9ec-f20e6c5ee715",
+                    "createdAt": "2021-03-11T19:51:38.396000+02:00",
+                    "message": "(service redis) has started 1 tasks: (task 65e9b5993a9e458db4bfff3df87bf537)."
+                }
+            ],
+            "createdAt": "2021-03-11T19:51:35.104000+02:00",
+            "placementConstraints": [],
+            "placementStrategy": [
+                {
+                    "type": "random"
+                }
+            ],
+            "networkConfiguration": {
+                "awsvpcConfiguration": {
+                    "subnets": [
+                        "subnet-9f908ed7",
+                        "subnet-0dd39b57",
+                        "subnet-0e2a2468"
+                    ],
+                    "securityGroups": [
+                        "sg-0d60e21d908ec29c6",
+                        "sg-0f53ecbdfa860de9c",
+                        "sg-4ba37511"
+                    ],
+                    "assignPublicIp": "DISABLED"
+                }
+            },
+            "schedulingStrategy": "REPLICA",
+            "createdBy": "arn:aws:iam::910416587115:role/Admin",
+            "enableECSManagedTags": true,
+            "propagateTags": "NONE"
+        }
+    ],
+    "failures": []
+}
