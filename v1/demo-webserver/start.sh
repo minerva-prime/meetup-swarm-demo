@@ -3,8 +3,8 @@
 CODE=0
 
 until [[ $CODE -eq 200 ]]; do
-	CODE=$(curl -I -s --write-out %{http_code} --output /dev/null http://nodeapp.demo:3000)
-	echo "waiting for nodeapp"
+	CODE=$(curl -I -s --write-out %{http_code} --output /dev/null http://${NODEAPP_URL}:3000/ping)
+	echo "waiting for nodeapp at ${NODEAPP_URL}"
 	sleep 1
 done
 
